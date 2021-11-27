@@ -38,6 +38,12 @@ dependencies:
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
 
+  email_validator: ^2.0.1
+
+  shared_preferences: ^2.0.9
+
+  http: ^0.13.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -9,14 +9,14 @@ class EditScreen extends StatelessWidget{
     return Scaffold(
       appBar: buildAppBar(),
       body: BodyEdit(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: kPrimaryColor,
-        child: Icon(
-          Icons.menu,
-          color: Colors.white,
-        ),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   backgroundColor: kPrimaryColor,
+      //   child: Icon(
+      //     Icons.menu,
+      //     color: Colors.white,
+      //   ),
+      // ),
     );
   }
 

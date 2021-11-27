@@ -1,6 +1,7 @@
 import 'package:send_messages/theme.dart';
 import 'package:flutter/material.dart';
 
+import 'Messages/create_screen.dart';
 import 'components/body.dart';
 import 'constants.dart';
 
@@ -42,20 +43,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _mainScreen extends State<MyHomePage> {
-  int _selectedIndex = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: kPrimaryColor,
-        child: Icon(
-          Icons.note_add,
-          color: Colors.white,
-        ),
-      ),
     );
   }
 
@@ -65,8 +57,12 @@ class _mainScreen extends State<MyHomePage> {
       title: Text("Messages"),
       actions: [
         IconButton(
-          icon: Icon(Icons.drag_handle),
-          onPressed: () {},
+          icon: Icon(Icons.note_add),
+          onPressed: ()  => Navigator.push(
+            context, MaterialPageRoute(
+              builder: (context) => CreateScreen()
+          ),
+          ),
         ),
       ],
     );

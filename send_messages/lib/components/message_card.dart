@@ -17,7 +17,7 @@ class MessageCard extends StatelessWidget{
 
     return InkWell(
       onTap: press,
-      child: Padding(padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: kDefaultPadding),
+      child: Padding(padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: kDefaultPadding*0.60),
         child: Row(
           children: [
             Expanded(
@@ -32,7 +32,7 @@ class MessageCard extends StatelessWidget{
                     Text(messages.title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600), maxLines: 1,
                     ),
                     SizedBox(height: 4),
-                    Text(messages.message, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300), maxLines: 1,
+                    Text(messages.message, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300), maxLines: 1, overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
@@ -43,11 +43,13 @@ class MessageCard extends StatelessWidget{
               children: [
                 Opacity(
                     opacity: 0.5,
-                    child: Text(messages.time)
+                    child: Text(messages.time_create)
                 ),
                 SizedBox(height: 6),
                 if(messages.isActive)
                   Icon(Icons.check, color: kPrimaryColor,)
+                else
+                  Icon(Icons.note_alt,color: Colors.grey,)
               ],
             ),
 
